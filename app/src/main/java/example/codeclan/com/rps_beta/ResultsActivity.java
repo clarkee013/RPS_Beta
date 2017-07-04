@@ -14,7 +14,7 @@ public class ResultsActivity extends AppCompatActivity {
 
 
 
-// TODO attached winnerView TextBox
+// TODO attach winnerView TextBox
 // TODO attach playerView TextBox
 // TODO attach computerView TextBox
 
