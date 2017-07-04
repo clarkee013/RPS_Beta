@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import behaviours.Move;
 
+import static android.R.attr.button;
+import static behaviours.Move.ROCK;
+
 public class MainActivity extends AppCompatActivity {
 
     Game game;
@@ -32,9 +35,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+//    public void onButtonClick(View Button){
+//        Intent intent = new Intent(this, ResultsActivity.class);
+//        if button == rockButton {
+//            player.setMove(Move.ROCK);
+//        } else if (button == paperButton) {
+//            player.setMove(Move.PAPER);
+//        } else if (button == scissorButton){
+//            intent.putExtra("winner", player.getMove());
+//            this.startActivity(intent);
+//        }
+//    }
+// the above doesn't like int's and =='s
+
 
     public void onRockButtonClickSetPlayerMoveRock(View rockButton){
-        player.setMove(Move.ROCK);
+        player.setMove(ROCK);
         int winner = game.compareMoves(player.getMove(), computer.getMove());
 
         Intent intent = new Intent(this, ResultsActivity.class);
