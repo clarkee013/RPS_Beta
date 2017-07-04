@@ -1,8 +1,12 @@
 package example.codeclan.com.rps_beta;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+
+import behaviours.Move;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,12 +32,40 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onButtonClickSetPlayerMove(){
 
+
+
+    public void onRockButtonClickSetPlayerMoveRock(View rockButton){
+        player.setMove(Move.ROCK);
+        int winner = game.compareMoves(player.getMove(), computer.getMove());
+
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("winner", game.displayWinner(winner));
+        startActivity(intent);
+    }
+
+    public void onPaperButtonClickSetPlayerMovePaper(View paperButton){
+        player.setMove(Move.PAPER);
+        int winner = game.compareMoves(player.getMove(), computer.getMove());
+
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("winner", game.displayWinner(winner));
+        startActivity(intent);
+    }
+
+    public void onPaperButtonClickSetPlayerMoveScissors(View paperButton){
+        player.setMove(Move.SCISSORS);
+        int winner = game.compareMoves(player.getMove(), computer.getMove());
+
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("winner", game.displayWinner(winner));
+        startActivity(intent);
     }
 
 
 
+
+}
 
 
 
@@ -49,4 +81,4 @@ public class MainActivity extends AppCompatActivity {
     //TODO pass intent to new activity -- results page
 
 
-}
+
