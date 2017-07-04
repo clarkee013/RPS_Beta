@@ -11,3 +11,10 @@ public class ResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_results);
     }
 }
+
+
+
+// TODO attached winnerView TextBox
+// TODO attach playerView TextBox
+// TODO attach computerView TextBox
+

@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     public void onRockButtonClickSetPlayerMoveRock(View rockButton){
         player.setMove(Move.ROCK);
         int winner = game.compareMoves(player.getMove(), computer.getMove());
@@ -73,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
     //TODO new CPU - done
     //TODO new Player - done
     //TODO layout buttons an shit - done
-    //TODO when button is pressed it sets the players move
-    //TODO computer moves
-    //TODO compare moves
+    //TODO when button is pressed it sets the players move - done
+    //TODO computer moves - done
+    //TODO compare moves - done
     //TODO display winner called > string
     //TODO intent with display winner string
     //TODO pass intent to new activity -- results page
