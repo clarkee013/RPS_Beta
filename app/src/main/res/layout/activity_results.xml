@@ -40,4 +40,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/winnerView" />
+
+    <TextView
+        android:id="@+id/gameCounter"
+        android:layout_width="152dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerView" />
+
 </android.support.constraint.ConstraintLayout>

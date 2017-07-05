@@ -52,6 +52,26 @@ public class GameTest {
         assertEquals("It's a draw", game.displayWinner(0));
     }
 
+    @Test
+    public void canGetPlayerCounter(){
+        assertEquals(0, game.playerCounter());
+    }
+
+    @Test
+    public void canGetComputerCounter(){
+        assertEquals(0, game.computerCounter());
+    }
+
+    @Test
+    public void canGetDrawCounter(){
+        assertEquals(0, game.drawCounter());
+    }
+
+    @Test
+    public void canDisplayGameStreak(){
+        assertEquals("Player has won 0 games, Computer has won 0 games. There have been 0 draws.", game.displayGameStreak());
+    }
+
 }
 
 

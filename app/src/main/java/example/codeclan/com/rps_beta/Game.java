@@ -1,5 +1,7 @@
 package example.codeclan.com.rps_beta;
 
+import java.util.ArrayList;
+
 import behaviours.Move;
 
 import static behaviours.Move.PAPER;
@@ -15,6 +17,9 @@ public class Game {
 
     private Player player;
     private Computer computer;
+    private int drawCounter;
+    private int playerCounter;
+    private int computerCounter;
 
 
     public Game() {
@@ -44,16 +49,36 @@ public class Game {
     public String displayWinner(int result) {
         switch (result) {
             case 0:
+                drawCounter++;
                 return "It's a draw";
             case 1:
+                playerCounter++;
                 return"Player wins";
             case -1:
+                computerCounter++;
                 return "Computer wins";
         }
         return null;
     }
 
+    public int drawCounter(){
+        drawCounter = 0;
+        return drawCounter;
+    }
 
+    public int playerCounter(){
+        playerCounter = 0;
+        return playerCounter;
+    }
+
+    public int computerCounter(){
+        computerCounter = 0;
+        return computerCounter;
+    }
+
+    public String displayGameStreak(){
+        return "Player has won " +playerCounter +" games, Computer has won " +computerCounter +" games. There have been " +drawCounter +" draws.";
+    }
 
 
 }

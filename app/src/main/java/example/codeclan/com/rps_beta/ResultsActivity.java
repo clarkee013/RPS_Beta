@@ -14,6 +14,7 @@ public class ResultsActivity extends AppCompatActivity {
     TextView winnerView;
     TextView playerView;
     TextView computerView;
+    TextView gameCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class ResultsActivity extends AppCompatActivity {
         winnerView = (TextView) findViewById(R.id.winnerView);
         playerView = (TextView) findViewById(R.id.playerView);
         computerView = (TextView) findViewById(R.id.computerView);
+        gameCounter = (TextView) findViewById(R.id.gameCounter);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -37,6 +39,8 @@ public class ResultsActivity extends AppCompatActivity {
         String computerAnswer = extras.getString("computerAnswer");
         computerView.setText(computerAnswer);
     }
+
+
 }
 
 
