@@ -17,7 +17,4 @@ public class Player {
     public Move getMove() {
         return move;
     }
-
-    // Player player = new Player();
-    // player.setMove(Move.ROCK);
 }

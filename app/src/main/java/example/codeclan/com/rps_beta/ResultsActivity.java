@@ -28,8 +28,14 @@ public class ResultsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        String answer = extras.getString("answer");
-        answerText.setText(answer);
+        String winnerAnswer = extras.getString("winner");
+        winnerView.setText(winnerAnswer);
+
+        String playerAnswer = extras.getString("playerAnswer");
+        playerView.setText(playerAnswer);
+
+        String computerAnswer = extras.getString("computerAnswer");
+        computerView.setText(computerAnswer);
     }
 }
 

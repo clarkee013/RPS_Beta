@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra("winner", game.displayWinner(winner));
+        intent.putExtra("playerAnswer", Move.ROCK.toString());
         startActivity(intent);
     }
 
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra("winner", game.displayWinner(winner));
+        intent.putExtra("playerAnswer", Move.PAPER.toString());
         startActivity(intent);
     }
 
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra("winner", game.displayWinner(winner));
+        intent.putExtra("playerAnswer", Move.SCISSORS.toString());
         startActivity(intent);
     }
 
