@@ -16,4 +16,6 @@ public class Computer {
         int index = random.nextInt(moves.length);
         return moves[index];
     }
+
+
 }
